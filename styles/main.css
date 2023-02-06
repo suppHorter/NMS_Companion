@@ -1,0 +1,47 @@
+table td, th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    color: white;
+    border: none;
+  }
+  
+table tr:nth-child(even){
+    background-color: rgba(0, 0, 0, 0.8);
+}
+table tr:nth-child(odd){
+    background-color: rgba(41, 41, 41, 0.8);
+}
+
+.popup {
+    background: rgba(0,0,0,0.8);
+    border: solid 1px white;
+    border-radius: 10px;
+    position: fixed;
+    width: 96%;
+    height: auto;
+    top: 0px;
+    margin: 27px;
+}
+
+.popup_close {
+    float: right;
+    margin: 10px;
+}
+
+.popup_background {
+    top: 0px;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    background: rgba(255,255,255,0.2);
+}
+
+.image {
+    width: 100px; 
+    cursor: pointer;
+}
+
+.text_bold {
+    font-size: 30px;
+    font-weight: bold;
+}
