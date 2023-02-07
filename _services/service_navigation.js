@@ -18,7 +18,7 @@ class Navigation {
         }, {
             route: "Fetch Wiki-Data",
             callback: () => {
-                this.data_fetcher.show();
+                // this.data_fetcher.show();
             }
         }];
     }
@@ -37,7 +37,7 @@ class Navigation {
             container.appendChild(this.getNavItem(this.routes[i]));   
         }
 
-        this.routes[0].callback();
+        this.routes[1].callback();
         
     }
 

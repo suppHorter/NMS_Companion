@@ -15,7 +15,7 @@ class Items {
         let table     = document.createElement("table");
         let tr = document.createElement('tr');
 
-        table.setAttribute('class', 'table table-striped')
+        table.setAttribute('class', 'table table-striped m-5 pb-5')
 
         for (let i = 0; i < Object.keys(this.config.items_refine[0]).length; i++) {
             let key =  Object.keys(this.config.items_refine[0])[i];
@@ -119,7 +119,7 @@ class Items {
         return item;
     }
     
-    showRecipes(item) {
+    showRecipes(item, callback=false) {
         let container = document.createElement("div");
         let table     = document.createElement("table");
 
@@ -144,6 +144,14 @@ class Items {
                 td.setAttribute("class", "text_bold");
                 td.appendChild(this.getImagePicture(this.getItemByName(recipe.ingredients[j][0]), 75));
                 tr.appendChild(td);
+            }
+
+            if (callback != false) {
+                tr.setAttribute('class', "tr_hover");
+                tr.addEventListener('click', () => {
+                    callback(item.recipes[i]);
+                    this.popup_S.hide();
+                });
             }
             
             tr.appendChild(output_amount);
